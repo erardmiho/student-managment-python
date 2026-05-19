@@ -24,6 +24,7 @@ def student_management():
     print("7. Enroll Student in Course")
     print("8. View Student in specific Courses")
     print("9. Exit")
+    print("10. Log Out")
 
 def main():
     system = StudentManagmentSystem()
@@ -71,6 +72,9 @@ def main():
                         student_id = int(input("Enter student ID: "))
                         system.view_student_courses(student_id)
                     elif sm_choice == '9':
+                        break
+                    elif sm_choice == '10':
+                        system.logout()
                         break
                     else:
                         print("Invalid option. Please try again.")
